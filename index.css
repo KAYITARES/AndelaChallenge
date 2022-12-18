@@ -80,7 +80,7 @@ label{
     align-items: center;
     gap:2rem;
 }
-.btn:link, .btn:visited{
+.btn:link, .btn:visited,.btn{
 text-decoration: none;
 background-color: #eeeeee;
 color:#555;
@@ -111,12 +111,94 @@ font-weight: 500;
     }
 }
 .modal{
-    width: 80rem;
-    height:50rem;
+    width: 75%;
+    /* height:50rem; */
     background:#ffffff;
     position: absolute;
     top:50%;
     left:50%;
+    padding: 5rem;
     transform: translate(-50%,-50%);
+    transition: all 3s;
+   z-index: 10;
+    
+}
+.hidden{
     display: none;
+}
+.close-modal{
+    font-size: 4.2rem;
+    border: none;
+    background-color: transparent;
+    display: inline-block;
+    text-align: left;
+    position: absolute;
+    top:2%;
+    right:4%;
+    cursor: pointer;
+    
+}
+
+.overlay{
+    position: absolute;
+    width: 100%;
+    height:100vh;
+    background:rgba(0, 0, 0, 0.637);
+    top:0;
+   left: 0;
+ 
+   transition: all 3s;
+    backdrop-filter: blur(2px);
+}
+.overlay-modal{
+    z-index:8;
+}
+.overlay-update{
+    z-index:12;
+}
+table{
+    width: 100%;
+    
+}
+caption h1{
+    margin-bottom: 3rem;
+}
+th{
+    background-color: rgb(232, 240, 254);
+}
+table,th,td{
+    border:1px solid grey;
+    border-collapse: collapse;
+    padding:1.5rem;
+    font-size: 1.4rem;
+  
+}
+tr{
+    transition: all 2s;
+}
+
+tr:hover{
+    background: rgb(176, 189, 211);
+}
+.action:link,.action:visited{
+    text-decoration:none
+}
+.action-update{
+    color:green;
+
+}
+.action-delete{
+    color:red;
+
+}
+.modal-update{
+    position:absolute;
+    top:30%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width:50%;
+    height:auto;
+    background:#fff;
+    padding:3rem;
+    z-index:14;
 }

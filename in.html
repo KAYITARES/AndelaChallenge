@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mobile money transaction</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="main">
+      <h1 class="headings">mobile money transaction</h1>
+      <form action="" onsubmit="onFormSubmit()">
+        <label class="label" for="date">Date</label>
+        <input
+          class="input"
+          type="datetime-local"
+          name="date"
+          id="date"
+          placeholder="Select Date"
+          required="true"
+        />
+        <label class="label" for="amount">amount</label>
+        <input
+          class="input"
+          type="number"
+          name="amount"
+          id="amount"
+          placeholder="Enter Amount"
+          required
+        />
+        <label class="label" for="receiverName">Receiver Name</label>
+        <input
+          class="input"
+          type="text"
+          name="receiverName"
+          id="receiverName"
+          placeholder="Enter Receiver Name"
+          required
+        />
+        <label class="label" for="receiverPhoneNumber"
+          >Receiver Phone Number</label
+        >
+        <input
+          class="input"
+          type="tel"
+          name="receiverPhoneNumber"
+          id="receiverPhoneNumber"
+          placeholder="Enter Receiver Phone Number"
+          required
+        />
+        <label class="label" for="senderName">Sender Name</label>
+        <input
+          class="input"
+          type="text"
+          name="senderName"
+          id="senderName"
+          placeholder="Enter Sender Name"
+          required
+        />
+        <label class="label" for="senderPhoneNumber">Enter Sender Number</label>
+        <input
+          class="input"
+          type="tel"
+          name="senderPhoneNumber"
+          id="senderPhoneNumber"
+          placeholder="Enter Sender Phone Number"
+          required
+        />
+        <div class="radio-btn">
+          <div class="radio-btn__receiver">
+            <input type="radio" name="stats" id="receive" value="Receive" required/>
+            <label for="Receive">Receive</label>
+          </div>
+          <div class="radio-btn__sender">
+            <input type="radio" name="stats" id="send" value="Send" />
+            <label for="Send">Send</label>
+          </div>
+        </div>
+        <div class="box-submit">
+          <input type="submit" value="Save" class="btn btn-save">
+          <a href="#" class="btn btn-save" id="button">Save</a>
+          <a href="#" class="btn btn-transaction">Transactions</a>
+        </div>
+      </form>
+   
+    <div class="modal hidden">
+      <button class="close-modal">&times;</button>
+      <td>
+      <table id="myTable">
+        <caption>
+          <h1>All Transaction Made!!!</h1>
+        </caption>
+        <thead>
+        <!-- <th>N0</th> -->
+<tr>
+        <th >Date</th>
+        <th>Amount</th>
+        <th>Received-Name</th>
+        <th>Received-Number</th>
+        <th>Send-Name</th>
+        <th>Send-Number</th>
+        <th>Status</th>
+        <th>Balance</th>
+        <th colspan="3">Action</th>
+        </tr>
+      </thead>
+        <!-- <th>Status</th> -->
+       
+        <!-- <th colspan="2">Action</th> -->
+        <tbody >
+
+        </tbody>
+       
+      </table>
+      
+    </div>
+
+
+    <div class="overlay overlay-modal hidden"></div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="/index.js"></script>
+    
+  </body>
+</html>
